@@ -3,10 +3,14 @@ const bodyParser = require('body-parser');
 const userRoutes = require('./routes/userRoutes');
 
 const app = express();
+
+// utilisation de bodyParser
 app.use(bodyParser.json());
 
+// Endpoints
 app.use('/api/users', userRoutes);
 
+// Ex: endpoint de test
 app.get('/', (req, res) => {
   res.send('Vulnerable Node.js project is running...');
 });
